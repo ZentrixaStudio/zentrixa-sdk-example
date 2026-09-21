@@ -27,7 +27,11 @@ kotlin {
     }
 }
 
-dependencies {
-    implementation("dev.zentrixa:ads-sdk:1.1.0")
+configurations.configureEach {
+    exclude(group = "com.google.android.gms", module = "play-services-ads")
+    exclude(group = "com.google.android.gms", module = "play-services-ads-lite")
 }
 
+dependencies {
+    implementation("dev.zentrixa:ads-sdk:1.2.0")
+}

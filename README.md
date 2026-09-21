@@ -1,6 +1,6 @@
 # Zentrixa Ads SDK Example
 
-This standalone Android application demonstrates how to integrate and use Zentrixa Ads SDK `1.1.0` from GitHub Packages.
+This standalone Android application demonstrates how to integrate and use Zentrixa Ads SDK `1.2.0` from GitHub Packages.
 
 ## Requirements
 
@@ -30,7 +30,22 @@ If the SDK repository/package is private, the GitHub user must also have access 
 The example resolves the stable SDK release from GitHub Packages:
 
 ```kotlin
-implementation("dev.zentrixa:ads-sdk:1.1.0")
+implementation("dev.zentrixa:ads-sdk:1.2.0")
+```
+
+SDK `1.2.0` includes the official AdMob mediation adapters for Mintegral, Pangle,
+Liftoff Monetize (Vungle), and Unity Ads. Do not add those adapters again in the app.
+The Pangle and Mintegral repositories are already configured in this example's
+`settings.gradle.kts`.
+
+The example also applies Google's required exclusions for mediation with the
+Next-Gen Mobile Ads SDK:
+
+```kotlin
+configurations.configureEach {
+    exclude(group = "com.google.android.gms", module = "play-services-ads")
+    exclude(group = "com.google.android.gms", module = "play-services-ads-lite")
+}
 ```
 
 The package repository is configured in `settings.gradle.kts`:
