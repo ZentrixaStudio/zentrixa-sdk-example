@@ -33,5 +33,5 @@ configurations.configureEach {
 }
 
 dependencies {
-    implementation("dev.zentrixa:ads-sdk:1.2.0")
+    implementation("dev.zentrixa:ads-sdk:1.2.1")
 }

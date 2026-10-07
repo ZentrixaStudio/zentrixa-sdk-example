@@ -15,7 +15,7 @@ dependencyResolutionManagement {
         maven { url = uri("https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea") }
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/ZentrixaStudio/zentrixa-sdk")
+            url = uri("https://maven.pkg.github.com/ZentrixaStudio/zentrixa-sdk-ads")
             credentials {
                 username = providers.gradleProperty("gpr.user").orNull
                     ?: System.getenv("GITHUB_ACTOR")
